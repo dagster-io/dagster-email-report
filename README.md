@@ -1,6 +1,8 @@
-# user_report
+# User Report
 
-This is a [Dagster](https://dagster.io/) project scaffolded with [`dagster project scaffold`](https://docs.dagster.io/getting-started/create-new-project).
+This is a sample project built on [Dagster](https://dagster.io/) and scaffolded with [`dagster project scaffold`](https://docs.dagster.io/getting-started/create-new-project).
+
+It demonstrates how to create a Dagster workflow that sends user emails with user-specific chart assets. 
 
 ## Getting started
 
@@ -8,6 +10,13 @@ First, install your Dagster code location as a Python package. By using the --ed
 
 ```bash
 pip install -e ".[dev]"
+```
+
+Create the test database and install the sample data
+
+```bash
+python database.py
+python sample_data.py
 ```
 
 Then, start the Dagster UI web server:
@@ -46,11 +55,3 @@ Once your Dagster Daemon is running, you can start turning on schedules and sens
 The easiest way to deploy your Dagster project is to use Dagster Cloud.
 
 Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
-
-
-## Build Sample Database
-
-```bash
-python database.py
-python sample_data.py
-```
