@@ -46,3 +46,11 @@ Once your Dagster Daemon is running, you can start turning on schedules and sens
 The easiest way to deploy your Dagster project is to use Dagster Cloud.
 
 Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
+
+
+## Build Sample Database
+
+```bash
+python database.py
+python sample_data.py
+```
