@@ -157,9 +157,9 @@ def create_reservations(conn):
                 conn.execute(
                     f"""
                     INSERT INTO reservation 
-                    (id, property_id, start_date, end_date, guest_id, created_at, total_cost)
+                    (id, property_id, start_date, end_date, guest_id, total_cost)
                     VALUES 
-                    ({reservation_id}, {property_id}, '{date.date()}', '{end_date.date()}', {guest_id}, '{date.date()}', {total_cost})
+                    ({reservation_id}, {property_id}, '{date.date()}', '{end_date.date()}', {guest_id}, {total_cost})
                 """
                 )
 
