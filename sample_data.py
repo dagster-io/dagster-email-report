@@ -72,8 +72,6 @@ def create_properties_and_hosts(conn, num_properties, amenities, submarkets):
         # Create a new property for the host
         street_address = fake.street_address()
         address = f"{street_address}, {city}, {state_code}, {zipcode}"
-        num_rooms = random.randint(1, 5)
-        num_bathrooms = random.randint(1, 3)
         nightly_rate = random.randint(5000, 50000)
         max_guests = random.randint(1, 10)
 
@@ -81,9 +79,9 @@ def create_properties_and_hosts(conn, num_properties, amenities, submarkets):
         conn.execute(
             f"""
             INSERT INTO property 
-            (id, address, lat, lon, host_id, market_name, num_rooms, num_bathrooms, nightly_rate, max_guests) 
+            (id, address, lat, lon, host_id, market_name, nightly_rate, max_guests) 
             VALUES 
-            ({i}, '{address}', {lat}, {lon}, {i}, '{market_name}', {num_rooms}, {num_bathrooms}, {nightly_rate}, {max_guests})
+            ({i}, '{address}', {lat}, {lon}, {i}, '{market_name}', {nightly_rate}, {max_guests})
         """
         )
 
